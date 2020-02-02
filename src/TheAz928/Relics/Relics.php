@@ -104,7 +104,7 @@ class Relics extends PluginBase implements Listener {
                                 continue;
                             }
 
-                            $list[$i] = Item::get(Item::COBBLESTONE)->nbtSerialize($i);
+                            $list[$i] = Item::get(Item::COBWEB)->nbtSerialize($i);
                         }
 
                         $chest->setCustomBlockData(new CompoundTag("", [new ListTag("Items", array_values($list), NBT::TAG_Compound), new StringTag("CustomName", $relic->getName())]));
